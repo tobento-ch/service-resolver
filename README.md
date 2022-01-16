@@ -55,7 +55,6 @@ composer require tobento/service-resolver
 Currently, there are the following implementations:
 
 - [service-resolver-container](https://github.com/tobento-ch/service-resolver-container)
-- [service-resolver-league](https://github.com/tobento-ch/service-resolver-league)
 
 ## Resolver Factory
 
