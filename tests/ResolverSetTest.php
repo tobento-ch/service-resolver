@@ -73,6 +73,17 @@ abstract class ResolverSetTest extends TestCase
         $this->assertSame('value', $r->get('closure'));
     }
     
+    public function testSetClosureUsingAutowiring()
+    {
+        $r = $this->createResolver();
+        
+        $r->set('closure', function (Foo $foo) {
+            return $foo;
+        });
+        
+        $this->assertInstanceOf(Foo::class, $r->get('closure'));
+    }
+    
     public function testSetClassName()
     {
         $r = $this->createResolver();
